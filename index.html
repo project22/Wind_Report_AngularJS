@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+  <title>Wind Report</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js">
+  </script>
+  <script type="text/javascript" src="js/windfinder.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link rel="stylesheet" href="css/foundation.css" />
+  <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+  <section role="main">
+    <div class="row"> 
+      <div class="large-12 medium-12 small-12 columns">
+        <div ng-controller="WindReportCtrl">
+
+          <h1>Wind Report</h1>   
+          <h3>Santa Monica, CA</h3>
+          <div class = "report-box" ng-repeat="hour in weather">
+            <ul class="pricing-table">
+              <li class="title">{{ hour.FCTTIME.hour }}:00 <img src="{{ hour.icon_url }}" width="30"></li>
+            <!--   <li class="price">$99.99</li> -->
+              <li class="description">{{ hour.FCTTIME.mon }}/{{ hour.FCTTIME.mday }}/{{ hour.FCTTIME.year }}</li>
+              <li class="bullet-item">{{ hour.wdir.dir }}</li>
+              <li class="bullet-item"><img src="img/arrow_down.png" style="transform:rotate({{ hour.wdir.degrees }}deg);
+      -ms-transform:rotate({{ hour.wdir.degrees }}deg); /* IE 9 */
+      -webkit-transform:rotate({{ hour.wdir.degrees }}deg); /* Safari and Chrome */"></li>
+              <li class="bullet-item" style="background-color: rgb(255,{{ 255 - (10 *hour.wspd.english) }},{{ 255 - (10 *hour.wspd.english) }})"> {{ hour.wspd.english }} mph</li>
+             <!--  <li class="cta-button"><a class="button" href="#">Do Something</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+.report-box {
+/*	background-color: grey;*/
+	padding: 1px;
+	width: 150px;
+/*	height: 200px;*/
+	float: left;
+	
+}
+
+.report-box-header {
+	padding: 5px;
+	background-color: white;
+}
+
+.report-box-body {
+	padding: 5px;
+	background-color: white;
+}
+
+.report-container {
+	width: 4000px;
+	height: 200px;
+}
+
+.scroll-box {
+	height: 200px;
+	width: 1000px;
+	overflow: auto;
+}
