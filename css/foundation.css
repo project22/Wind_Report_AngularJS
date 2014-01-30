@@ -30,8 +30,8 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
-  color: gray;
+  background: #145252;
+  color: white;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -1982,7 +1982,7 @@ button, .button {
 
 /* Pricing Tables */
 .pricing-table {
-  border: solid 1px #dddddd;
+  border: solid 1px #337070;
   margin-left: 0;
   margin-bottom: 1.25rem; }
   .pricing-table * {
@@ -2507,7 +2507,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
-  color: gray;
+  color: #C2D4D4;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
