@@ -8,14 +8,15 @@
 	
 }
 
-/*div {
+div {
 	border-style: solid;
 	border-width: 1px;
 	border-color: yellow;
 	margin: 5px;
-}*/
+}
 
 .wind-dot-container {
+	position: relative;
 	width: 200px;
 	height: 200px;
 }
@@ -45,15 +46,32 @@
 }
 
 .wind-dot-data {
-	/*text-align: center;*/
+	text-align: center;
 	position: absolute;
 	z-index: 10;
-	width: 150px;
-	margin-top: 0;
-	margin-right: auto;
-	margin-bottom: 0;
-	margin-left: auto;
-	margin: 0 auto 0 auto;
+	width: 180px;
+	left: 50%;	
+  margin-left: -90px;
+	top: 50%;
+  height: 150px;
+  margin-top: -62px;
+
+}
+
+.windspeed {
+	font-size: 44px;
+	font-weight: bold;
+	color: black;
+}
+
+.direction {
+	padding-top: 15px;
+	font-size: 30px;
+	color: grey;
+}
+
+.time {
+	font-size: 20px;
 }
 
 

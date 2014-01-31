@@ -43,7 +43,25 @@
     </div>
     <div class="row">   
       <div class = "large-2 medium-3 small-12 columns" ng-repeat="hour in weather">
-        <div class = "report-box">
+        <div class="wind-dot-container">
+          <div class="wind-dot-data">
+            <div class="time">{{ hour.FCTTIME.hour }}:00</div>
+            <div>{{ hour.FCTTIME.mon }}/{{ hour.FCTTIME.mday }}/{{ hour.FCTTIME.year }}</div>
+            <div class="windspeed">{{ hour.wspd.english }} mph</div>
+            <div class="direction">{{ hour.wdir.dir }}</div>
+          </div>
+
+          <div class="wind-dot-arrow" style="transform:rotate({{ hour.wdir.degrees + 135}}deg);
+    -ms-transform:rotate({{ hour.wdir.degrees + 135}}deg); /* IE 9 */
+    -webkit-transform:rotate({{ hour.wdir.degrees + 135}}deg); /* Safari and Chrome */">
+            <div class="wind-dot-circle" style="background-color: rgb(255,{{ 255 - (9 *hour.wspd.english) }},{{ 255 - (9 *hour.wspd.english) }})"></div>
+            <div class="wind-dot-point" style="background-color: rgb(255,{{ 255 - (9 *hour.wspd.english) }},{{ 255 - (9 *hour.wspd.english) }})"></div>
+          </div> 
+        </div>
+
+
+
+  <!--       <div class = "report-box">
           <ul class="pricing-table">
             <li class="title">{{ hour.FCTTIME.hour }}:00 <img src="{{ hour.icon_url }}" width="30"></li>
             <li class="description">{{ hour.FCTTIME.mon }}/{{ hour.FCTTIME.mday }}/{{ hour.FCTTIME.year }}</li>
@@ -55,21 +73,22 @@
             </li>
             <li class="bullet-item" style="background-color: rgb(255,{{ 255 - (9 *hour.wspd.english) }},{{ 255 - (9 *hour.wspd.english) }})"> {{ hour.wspd.english }} mph</li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
   <div class="wind-dot-container">
+    <div class="wind-dot-data">
+      <div class="time">10:00</div>
+      <div>date</div>
+      <div class="windspeed">10 mph</div>
+      <div class="direction">WSW</div>
+    </div>
+
     <div class="wind-dot-arrow">
       <div class="wind-dot-circle"></div>
       <div class="wind-dot-point"></div>
-    </div>
-    <div class="wind-dot-data">
-      <div>10:00</div>
-      <div>date</div>
-      <div>windspeed</div>
-      <div>direction</div>
-    </div>
+    </div> 
   </div>
 </body>
 </html>
