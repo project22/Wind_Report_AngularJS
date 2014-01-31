@@ -20,6 +20,7 @@
 	position: relative;
 	width: 150px;
 	height: 150px;
+	margin-bottom: 1.875em;
 }
 
 .wind-dot-arrow {
@@ -120,7 +121,6 @@
 	.wind-dot-container {
 		width: 130px;
 		height: 130px;
-		margin-bottom: 20px;
 	}
 
 	.wind-dot-data {
