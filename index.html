@@ -51,9 +51,9 @@
             <div class="direction"> {{ hour.wdir.dir }}</div>
           </div>
 
-          <div class="wind-dot-arrow" style="transform:rotate({{ hour.wdir.degrees + 135}}deg);
-    -ms-transform:rotate({{ hour.wdir.degrees + 135}}deg); /* IE 9 */
-    -webkit-transform:rotate({{ hour.wdir.degrees + 135}}deg); /* Safari and Chrome */">
+          <div class="wind-dot-arrow" style="transform:rotate({{ hour.wdir.degrees - 225}}deg);
+    -ms-transform:rotate({{ hour.wdir.degrees - 225}}deg); /* IE 9 */
+    -webkit-transform:rotate({{ hour.wdir.degrees - 225}}deg); /* Safari and Chrome */">
             <div class="wind-dot-circle" style="background-color: rgb(255,{{ 255 - (9 *hour.wspd.english) }},{{ 255 - (9 *hour.wspd.english) }})"></div>
             <div class="wind-dot-point" style="background-color: rgb(255,{{ 255 - (9 *hour.wspd.english) }},{{ 255 - (9 *hour.wspd.english) }})"></div>
           </div> 
