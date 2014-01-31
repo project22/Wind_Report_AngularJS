@@ -16,24 +16,29 @@
 </head>
 <body>
   <section role="main" ng-controller="WindReportCtrl">
-
-    <div class="row"> 
-      <div class="large-12 medium-12 small-12 columns">
-        
-        <form>
-          <div class="row collapse">
-            <div class="large-4 columns">
-              <!-- <h1>Wind Dots</h1> -->
-              <img src="img/wind_dots_logo.png">
-            </div>
-            <div class="large-6 small-10 columns">
-              <input id="city" type="text" placeholder="City" ng-change="getWindData()"> 
-            </div>
-            <div class="large-2 small-2 columns">
-              <a href="#" class="button postfix" ng-click="getWindData()">Go</a>
-            </div>
+    <div class="row">
+      <div class="columns">
+      <form>
+        <div class="row collapse">  
+          <div class="large-4 columns">
+            <img src="img/logo2.png">
           </div>
-        </form>
+          
+          <div class="large-6 small-10 columns">
+            <input id="city" type="text" placeholder="Get wind for">  
+          </div>
+          <div class="large-2 small-2 columns">
+            <a href="#" class="button postfix" ng-click="getWindData()">Go</a>
+          </div>
+        </div>
+        
+      <form>
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="columns">
+        <h3>{{ data.cityName }}</h3>
       </div>
     </div>
     <div class="row">   
@@ -54,5 +59,17 @@
       </div>
     </div>
   </section>
+  <div class="wind-dot-container">
+    <div class="wind-dot-arrow">
+      <div class="wind-dot-circle"></div>
+      <div class="wind-dot-point"></div>
+    </div>
+    <div class="wind-dot-data">
+      <div>10:00</div>
+      <div>date</div>
+      <div>windspeed</div>
+      <div>direction</div>
+    </div>
+  </div>
 </body>
 </html>

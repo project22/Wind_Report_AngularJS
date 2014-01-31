@@ -1,4 +1,11 @@
-var city="Santa Monica";
+$(function() {
+  initialize();
+});
+
+$(document).foundation();
+
+var city;
+var cityName;
 
 var App = angular.module('App', []);
 
@@ -9,9 +16,12 @@ App.controller('WindReportCtrl', function($scope, $http) {
 		url = "http://api.wunderground.com/api/3edda987ad0a169a/hourly10day/q/"+ city + ".json?callback=JSON_CALLBACK";
 	  $http.jsonp(url)
 	    .success(function(data){
-	      $scope.weather = data.hourly_forecast;                     
+	      $scope.weather = data.hourly_forecast;  
+	      console.log(data.hourly_forecast);
+	      $scope.data = { cityName: cityName };                   
 	  })
 	}
+
 });
 
 
@@ -20,10 +30,6 @@ App.controller('WindReportCtrl', function($scope, $http) {
 // }
 
 
-$(function() {
-  initialize();
-  foundation()
-});
 
 
 // Google Autocomplete
@@ -44,6 +50,7 @@ function initialize() {
 	  console.log(place);
 	  // 37.8,-122.4
 	  city = place.geometry.location.d + "," + place.geometry.location.e;
+	  cityName = place.address_components[0].long_name;
 	  // city = place.address_components[0].long_name + ", " + place.address_components[2].long_name + ", " + place.address_components[3].long_name;
 	  console.log(city);
     
